@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper">
+
+    <!-- לבבות בשורה עליונה -->
+    <LinearLayout
+        android:id="@+id/heartsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp">
+
+
+    <ImageView
+            android:id="@+id/main_IMG_heart0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart__3_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart__3_" />
+
+        <ImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/heart__3_" />
+    </LinearLayout>
+
+    <!-- שחקן -->
+    <ImageView
+        android:id="@+id/player"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="159dp"
+        android:layout_marginBottom="57dp"
+        android:src="@drawable/spaceship" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u25C0	"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u25B6	"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+
+    <!-- טקסט Game Over -->
+    <TextView
+        android:id="@+id/gameOverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Over"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"/>
+
+    <!-- כפתור Restart -->
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/gameOverText"/>
+
+</RelativeLayout>
