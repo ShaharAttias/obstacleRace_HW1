@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper">
 
-    <!-- לבבות בשורה עליונה -->
     <LinearLayout
         android:id="@+id/heartsContainer"
         android:layout_width="wrap_content"
@@ -15,8 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp">
 
-
-    <ImageView
+        <ImageView
             android:id="@+id/main_IMG_heart0"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -35,36 +33,126 @@
             android:src="@drawable/heart__3_" />
     </LinearLayout>
 
-    <!-- שחקן -->
+    <!-- מטריצת מכשולים -->
+    <GridLayout
+        android:id="@+id/obstacleGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/heartsContainer"
+        android:layout_above="@id/player_lane_1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:rowCount="14"
+        android:columnCount="3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView android:id="@+id/obstacle_0_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_0_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_0_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_1_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_1_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_1_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_2_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_2_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_2_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_3_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_3_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_3_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_4_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_4_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_4_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_5_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_5_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_5_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_6_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_6_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_6_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_7_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_7_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_7_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_8_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_8_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_8_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <!-- המשך כמו ששלחת לי קודם עד obstacle_7_2 -->
+        <ImageView android:id="@+id/obstacle_9_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_9_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_9_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_10_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_10_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_10_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_11_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_11_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_11_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_12_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_12_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_12_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+
+        <ImageView android:id="@+id/obstacle_13_0" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_13_1" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+        <ImageView android:id="@+id/obstacle_13_2" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:visibility="invisible" android:src="@drawable/meteor"/>
+    </GridLayout>
+
     <ImageView
-        android:id="@+id/player"
+        android:id="@+id/player_lane_0"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="159dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="60dp"
+        android:visibility="invisible"
+        android:src="@drawable/spaceship" />
+
+    <ImageView
+        android:id="@+id/player_lane_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:visibility="visible"
+        android:src="@drawable/spaceship" />
+
+    <ImageView
+        android:id="@+id/player_lane_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
         android:src="@drawable/spaceship" />
 
     <Button
         android:id="@+id/leftButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\u25C0	"
-
+        android:text="◀"
+        android:textSize="32sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/rightButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\u25B6	"
+        android:text="▶"
+        android:textSize="32sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true" />
 
-
-    <!-- טקסט Game Over -->
     <TextView
         android:id="@+id/gameOverText"
         android:layout_width="wrap_content"
@@ -72,9 +160,8 @@
         android:text="Game Over"
         android:visibility="gone"
         android:textSize="20sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
-    <!-- כפתור Restart -->
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
@@ -82,6 +169,6 @@
         android:text="Restart"
         android:visibility="gone"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/gameOverText"/>
+        android:layout_below="@id/gameOverText" />
 
 </RelativeLayout>
